@@ -16,6 +16,7 @@ O projeto utiliza as seguintes tecnologias:
 - ASP.NET 7
 - Entity Framework Core
 - JWT
+- Docker
 
 ## Configuração
 
