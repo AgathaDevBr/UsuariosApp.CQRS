@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "CkkiZgGI6RZJwQTjX9Mg65VxDFsB4NEhVL21xP0GcoQ=",
+  "Source": "UsuariosApp.Api",
+  "BasePath": "_content/UsuariosApp.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

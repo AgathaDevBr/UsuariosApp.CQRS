@@ -1,0 +1,56 @@
+name: dockercompose15515189585009746445
+services:
+  db:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: '@Coti2023'
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1433"
+      protocol: tcp
+  rabbitmq:
+    hostname: rabbitmq
+    image: rabbitmq:3-management
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 5672
+      published: "5672"
+      protocol: tcp
+    - mode: ingress
+      target: 15672
+      published: "15672"
+      protocol: tcp
+  usuariosapp.api:
+    build:
+      context: C:\Infis\fonte\UsuariosApp
+      dockerfile: UsuariosApp.API/Dockerfile
+    depends_on:
+      db:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
+        restart: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: usuariosappapi
+    links:
+    - rabbitmq
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      published: "8080"
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose15515189585009746445_default

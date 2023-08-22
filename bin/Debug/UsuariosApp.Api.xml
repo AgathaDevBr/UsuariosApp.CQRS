@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UsuariosApp.Api</name>
+    </assembly>
+    <members>
+        <member name="M:UsuariosApp.Api.Controllers.UsuariosController.Autenticar(UsuariosApp.Application.Models.Requests.AutenticarRequestDTO)">
+            <summary>
+            Autenticação de usuários
+            </summary>
+        </member>
+        <member name="M:UsuariosApp.Api.Controllers.UsuariosController.CriarConta(UsuariosApp.Application.Models.Requests.CriarContaRequestDTO)">
+            <summary>
+            Criação de conta de usuários
+            </summary>
+        </member>
+        <member name="M:UsuariosApp.Api.Controllers.UsuariosController.RecuperarSenha(UsuariosApp.Application.Models.Requests.RecuperarSenhaRequestDTO)">
+            <summary>
+            Recuperar  conta de usuários
+            </summary>
+        </member>
+    </members>
+</doc>
