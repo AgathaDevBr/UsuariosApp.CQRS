@@ -17,6 +17,7 @@ O projeto utiliza as seguintes tecnologias:
 - Entity Framework Core
 - JWT
 - Docker
+  - RABBITMQ
 
 ## Configuração
 
